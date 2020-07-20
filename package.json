@@ -4,6 +4,7 @@
     "@babel/node": "^7.10.5",
     "@babel/preset-env": "^7.10.4",
     "apollo-server-express": "^2.16.0",
+    "dotenv": "^8.2.0",
     "express": "^4.17.1"
   },
   "name": "graphql-wrap-movie-api",

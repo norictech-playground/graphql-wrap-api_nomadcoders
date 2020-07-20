@@ -1,3 +1,4 @@
+import { config } from 'dotenv/config'
 import express from 'express'
 import { ApolloServer, gql } from 'apollo-server-express'
 
@@ -10,4 +11,4 @@ const server = new ApolloServer({ typeDefs, resolvers });
 const app = express()
 server.applyMiddleware({ app })
 
-app.listen({ port: 4000 }, () => console.log(`Server running on port 4000`)); // http://localhost:{port}/graphql
+app.listen({ port: process.env.PORT }, () => console.log(`Server running on port ${process.env.PORT}`)); // http://localhost:{port}/graphql
