@@ -1,18 +1,15 @@
-let movies = [
-    {
-        "id": 1,
-        "name": "Naruto"
-    }
-]
+import fetch from 'node-fetch'
 
-const getMovies = () => movies
+const getMovies = (limit) => {
+    let url = `${process.env.API_URL}`
+    url += '?limit=' + (limit ?? 10)
 
-const getMovie = id => {
-    const filteredMovies = movies.filter((items) => items.id === id)
-    return filteredMovies[0]
+    const movies = fetch(url)
+                    .then(res => res.json())
+                    .then(json => json.data.movies)
+    return movies
 }
 
 export {
-    getMovies,
-    getMovie
+    getMovies
 }
