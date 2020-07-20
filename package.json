@@ -1,0 +1,13 @@
+{
+  "dependencies": {
+    "apollo-server-express": "^2.16.0",
+    "express": "^4.17.1"
+  },
+  "name": "graphql-wrap-movie-api",
+  "version": "1.0.0",
+  "description": "Wrap a Movie API with GraphQL",
+  "main": "server.ts",
+  "repository": "https://github.com/norictech-playground/graphql-wrap-api_nomadcoders",
+  "author": "norictech <ahmad.uji1902@gmail.com>",
+  "license": "MIT"
+}
