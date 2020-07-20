@@ -8,6 +8,7 @@ const typeDefs = gql`
 
   type Query {
     movies(limit: Int): [Movie]!
+    movie(id: Int!): Movie
   }
 `
 
